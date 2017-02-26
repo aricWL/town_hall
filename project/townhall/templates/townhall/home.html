@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>I am a....</h2>
+
+<div>
+	<form action="{{url_for('townhall.citizen')}}">
+		<button type = "submit">Citizen</button>
+	</form>
+	<form action="{{url_for('townhall.new')}}">
+		<button type = "submit">Representative</button>
+	</form>
+
+</div>
+
+{% endblock %}

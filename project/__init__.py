@@ -23,3 +23,8 @@ from project.townhall.views import townhall_blueprint
 app.register_blueprint(townhall_blueprint, url_prefix='/townhall')
 #app.register_blueprint(boiler2_blueprint, url_prefix='/boiler1/<int:user_id>/boiler2')
 
+@app.route('/')
+def root():
+    return redirect('/townhall/home')
+
+

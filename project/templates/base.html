@@ -3,13 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Base</title>
+    <title>TownHalls</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+    	a {
+        color: black;
+        font-family: 'Josefin Sans', sans-serif;
+        text-decoration: none;
+    </style>
 </head>
 
 <body>
+<a href="{{url_for('townhall.home')}}"><h1>TownHalls</h1></a>
 
  {% block content %}
+ 
    {% endblock %}
 
 

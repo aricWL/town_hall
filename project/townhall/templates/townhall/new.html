@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Welcome! Please provide us with some information so we can get a <br> TownHall set up for you.</h2>
+
+
+<form method="POST" action="{{url_for('townhall.new')}}"> 
+  {% for field in form %}
+  <p>
+    {{ field.label }}
+    {{ field }}
+    <span>
+      {% if field.errors %}
+        {% for error in field.errors %}
+          {{ error }}
+        {% endfor %}
+      {% endif %}
+    </span>
+  </p>
+  {% endfor %}
+  <button type="submit">Sign up!</button>
+</form>
+</form>
+
+{% endblock %}
